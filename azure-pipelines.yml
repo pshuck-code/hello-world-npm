@@ -25,7 +25,7 @@ steps:
 - task: PublishPipelineArtifact@0 
   inputs:
     artifactName: helloworldbin
-    targetPath: $(System.DefaultWorkingDirectory)/binzone
+    targetPath: $(System.DefaultWorkingDirectory)/s
 
 - script: |
     pwd
