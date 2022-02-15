@@ -31,8 +31,14 @@ steps:
     pwd
     ls
 
+#- task: Npm@1
+#  inputs:
+#    command: publish
+#    publishRegistry: useFeed
+#    publishFeed: pshuck0704
 - task: Npm@1
   inputs:
-    command: publish
-    publishRegistry: useFeed
-    publishFeed: pshuck0704
+    command: 'publish'
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    publishRegistry: 'useFeed'
+    publishFeed: '8af28522-10e7-49dc-b0ad-2168a0e3b635'
