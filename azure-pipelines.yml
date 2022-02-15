@@ -30,3 +30,9 @@ steps:
 - script: |
     pwd
     ls
+
+- task: Npm@1
+  inputs:
+    command: publish
+    publishRegistry: useFeed
+    publishFeed: pshuck0704
