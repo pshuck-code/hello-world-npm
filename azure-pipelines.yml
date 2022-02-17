@@ -1,10 +1,4 @@
 # Node.js
-- task: DownloadGitHubRelease@0
-  inputs:
-    connection: 'ForReleases'
-    userRepository: 'carrot/carrot2'
-    defaultVersionType: 'latest'
-    downloadPath: '$(System.ArtifactsDirectory)'
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -48,3 +42,10 @@ steps:
     workingDir: '$(System.DefaultWorkingDirectory)'
     publishRegistry: 'useFeed'
     publishFeed: '8af28522-10e7-49dc-b0ad-2168a0e3b635'
+
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'ForReleases'
+    userRepository: 'carrot/carrot2'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
