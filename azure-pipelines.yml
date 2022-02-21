@@ -49,3 +49,15 @@ steps:
     userRepository: 'carrot/carrot2'
     defaultVersionType: 'latest'
     downloadPath: '$(System.ArtifactsDirectory)'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      python -m pip install --upgrade pip
+          pip install -r api_folder/requirements.txt
+          git clone --mirror 'https://github.com/nexB/scancode-toolkit.git'
+          ls 
+          
+          cd scancode-toolkit.git
+          scancode -clipeu --html output.html $(System.DefaultWorkingDirectory)
+          
