@@ -43,12 +43,12 @@ steps:
     publishRegistry: 'useFeed'
     publishFeed: '8af28522-10e7-49dc-b0ad-2168a0e3b635'
 
-- task: DownloadGitHubRelease@0
-  inputs:
-    connection: 'ForReleases'
-    userRepository: 'carrot/carrot2'
-    defaultVersionType: 'latest'
-    downloadPath: '$(System.ArtifactsDirectory)'
+#- task: DownloadGitHubRelease@0
+#  inputs:
+#    connection: 'ForReleases'
+#    userRepository: 'carrot/carrot2'
+#    defaultVersionType: 'latest'
+#    downloadPath: '$(System.ArtifactsDirectory)'
 
 - task: CmdLine@2
   inputs:
