@@ -55,7 +55,7 @@ steps:
     script: |
       python -m pip install --upgrade pip
           pip install -r api_folder/requirements.txt
-          git clone --mirror 'https://github.com/nexB/scancode-toolkit.git'
+          pip install scancode-toolkit
           ls 
           
           cd scancode-toolkit.git
